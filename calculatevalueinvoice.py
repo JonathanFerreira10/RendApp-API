@@ -1,3 +1,3 @@
-def calculateValueInvoice(valueInvoice, income):
-    total = income - valueInvoice
+def calculateValueInvoice(data):
+    total = data['income'] - data['valueInvoice']
     return {"total": total}

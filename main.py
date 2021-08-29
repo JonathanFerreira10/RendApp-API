@@ -2,6 +2,7 @@ from flask                 import Flask, request
 from flask_cors            import CORS
 from calculatevalueinvoice import calculateValueInvoice
 
+
 app = Flask("RendApp")
 CORS(app)
 cors = CORS(app, resources = {
@@ -19,7 +20,7 @@ def totalValueInvoice():
 @app.route("/receivevalue", methods = ["POST"])
 def receiveValueInvoice():
     body = request.get_json()
-    newinv = calculateValueInvoice(body["valueInvoice"], body["income"])
+    newinv = calculateValueInvoice(body)
     return newinv
 
 app.run()
