@@ -1,6 +1,6 @@
-RendApp API 
+# RendApp API in Python
 
-Dependencies: 
+## Dependencies: 
 
 - pip install flask
 
